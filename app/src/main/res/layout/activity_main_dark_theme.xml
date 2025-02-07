@@ -1,18 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
     android:id="@+id/main"
     android:paddingBottom="28dp"
-    android:background="@color/white_theme">
+    android:background="@color/dark_theme">
     <RelativeLayout
         android:id="@+id/panel_head"
         android:layout_width="match_parent"
         android:layout_height="56dp"
-        tools:ignore="UselessParent">
+        >
         <TextView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
@@ -22,37 +21,35 @@
             android:layout_marginTop="14dp"
             android:textSize="22sp"
             android:gravity="top"
-            android:textAppearance="@style/title"
+            style="@style/title"
             >
         </TextView>
     </RelativeLayout>
 
     <Button
-        android:id="@+id/search_button"
-        style="@style/white_theme_button"
+        style="@style/dark_theme_button"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:text="@string/search"
-        app:icon="@drawable/search_icon">
+        app:icon="@drawable/search_icon"
+        >
 
     </Button>
 
     <Button
-        android:id="@+id/media_button"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:text="@string/media"
         app:icon="@drawable/media_icon"
-        style="@style/white_theme_button"
+        style="@style/dark_theme_button"
         >
     </Button>
     <Button
-        android:id="@+id/settings_button"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:text="@string/settings"
         app:icon="@drawable/settings_icon"
-        style="@style/white_theme_button"
+        style="@style/dark_theme_button"
         >
     </Button>
 
