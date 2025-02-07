@@ -32,6 +32,5 @@ class MainActivity : AppCompatActivity() {
         settingsButton.setOnClickListener {
             Toast.makeText(this@MainActivity, "Вы нажали на кнопку 'Настройки'", Toast.LENGTH_SHORT).show()
         }
-
     }
 }
