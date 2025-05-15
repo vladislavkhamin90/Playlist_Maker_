@@ -4,114 +4,51 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:id="@+id/settings"
     android:orientation="vertical">
-    <LinearLayout
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/title"
         android:layout_width="match_parent"
-        android:layout_height="56dp"
-        android:layout_marginBottom="24dp"
-        android:orientation="horizontal"
-        >
+        android:layout_height="@dimen/_56dp"
+        app:title="@string/settings"
+        app:titleTextAppearance="@style/title_attrs_settings"
+        style="@style/title_settings"
+        android:layout_marginBottom="@dimen/_24dp" />
 
-        <View
-            android:id="@+id/back_button"
-            android:layout_width="24dp"
-            android:layout_height="24dp"
-            android:layout_gravity="center"
-            android:layout_marginStart="12dp"
-            android:background="@drawable/arrow_back">
+    <com.google.android.material.switchmaterial.SwitchMaterial
+        android:id="@+id/theme_switcher"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:paddingHorizontal="@dimen/_16dp"
+        android:paddingVertical="20dp"
+        android:text="@string/dark_theme"
+        app:thumbTint="@color/switch_thumb_color"
+        app:trackTint="@color/switch_track_color"
+        android:textSize="@dimen/_16sp" />
 
-        </View>
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="12dp"
-            android:text="@string/settings"
-            android:textColor="@color/black"
-            android:layout_marginTop="14dp"
-            android:textSize="22sp"
-            >
-        </TextView>
-    </LinearLayout>
-    <LinearLayout
+    <TextView
+        android:id="@+id/sharing"
         android:layout_width="match_parent"
-        android:layout_height="56dp"
-        >
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            style="@style/white_theme_settings_text"
-            android:text="@string/dark_theme"
-            >
-        </TextView>
-        <Switch
-            android:id="@+id/switch1"
-            android:layout_width="48dp"
-            android:layout_height="match_parent"
-            tools:ignore="UseSwitchCompatOrMaterialXml"
-            android:layout_marginRight="6dp"
-            android:trackTint="@color/color_switch_1"
-            android:layout_gravity="center"
-            >
-        </Switch>
+        android:layout_height="@dimen/_56dp"
+        android:text="@string/share_app"
+        style="@style/settings_text"
+        app:drawableEndCompat="@drawable/share_icon" />
 
-    </LinearLayout>
-    <LinearLayout
+    <TextView
+        android:id="@+id/support"
         android:layout_width="match_parent"
-        android:layout_height="56dp"
-        >
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            style="@style/white_theme_settings_text"
-            android:text="@string/share_app"
-            >
-        </TextView>
-        <View
-            android:layout_width="24dp"
-            android:layout_height="24dp"
-            android:background="@drawable/share_icon"
-            style="@style/icon_pos"
-            >
-        </View>
-    </LinearLayout>
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="56dp"
-        >
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            style="@style/white_theme_settings_text"
-            android:text="@string/support"
-            >
-        </TextView>
-        <View
-            android:layout_width="24dp"
-            android:layout_height="24dp"
-            android:background="@drawable/support_icon"
-            style="@style/icon_pos"
-            >
-        </View>
-    </LinearLayout>
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="56dp"
-        >
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            style="@style/white_theme_settings_text"
-            android:text="@string/user_agreement"
-            >
-        </TextView>
-        <View
-            android:layout_width="24dp"
-            android:layout_height="24dp"
-            android:background="@drawable/mark_right"
-            style="@style/icon_pos"
-            >
-        </View>
-    </LinearLayout>
+        android:layout_height="@dimen/_56dp"
+        android:text="@string/support"
+        style="@style/settings_text"
+        app:drawableEndCompat="@drawable/support_icon" />
 
+    <TextView
+        android:id="@+id/agreement"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_56dp"
+        android:text="@string/user_agreement"
+        style="@style/settings_text"
+        app:drawableEndCompat="@drawable/mark_right" />
 
 </LinearLayout>

@@ -6,54 +6,36 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
     android:id="@+id/main"
+    android:theme="@style/Prime_theme"
     android:paddingBottom="28dp"
-    android:background="@color/white_theme">
-    <RelativeLayout
-        android:id="@+id/panel_head"
-        android:layout_width="match_parent"
-        android:layout_height="56dp"
-        tools:ignore="UselessParent">
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:text="@string/title"
-            android:textColor="#FFFFFF"
-            android:layout_marginStart="16dp"
-            android:layout_marginTop="14dp"
-            android:textSize="22sp"
-            android:gravity="top"
-            android:textAppearance="@style/title"
-            >
-        </TextView>
-    </RelativeLayout>
+    >
 
-    <Button
+    <androidx.appcompat.widget.Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_56dp"
+        app:title="@string/title"
+        app:titleTextColor="@color/white"
+        />
+
+    <com.google.android.material.button.MaterialButton
         android:id="@+id/search_button"
-        style="@style/white_theme_button"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="@string/search"
-        app:icon="@drawable/search_icon">
+        style="@style/search_button"
+        android:text="@string/search"/>
 
-    </Button>
-
-    <Button
+    <com.google.android.material.button.MaterialButton
         android:id="@+id/media_button"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:text="@string/media"
-        app:icon="@drawable/media_icon"
-        style="@style/white_theme_button"
-        >
-    </Button>
-    <Button
+        style="@style/media_button"/>
+
+    <com.google.android.material.button.MaterialButton
         android:id="@+id/settings_button"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:text="@string/settings"
-        app:icon="@drawable/settings_icon"
-        style="@style/white_theme_button"
-        >
-    </Button>
+        style="@style/settings_button" />
 
 </LinearLayout>
