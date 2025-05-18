@@ -1,4 +1,4 @@
-package com.example.playlist_maker
+package com.example.playlist_maker.presentation
 
 import android.content.Intent
 import android.os.Bundle
@@ -9,7 +9,6 @@ import android.text.TextWatcher
 import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
-import android.view.inputmethod.EditorInfo
 import android.widget.Button
 import android.widget.EditText
 import android.widget.ImageView
@@ -25,6 +24,12 @@ import androidx.core.view.WindowInsetsCompat
 import androidx.core.view.isVisible
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.example.playlist_maker.R
+import com.example.playlist_maker.SearchHistory
+import com.example.playlist_maker.Songs
+import com.example.playlist_maker.SongsResult
+import com.example.playlist_maker.Track
+import com.example.playlist_maker.data.network.SongsApi
 import com.google.gson.Gson
 import retrofit2.Call
 import retrofit2.Callback

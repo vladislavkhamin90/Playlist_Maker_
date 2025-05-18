@@ -1,4 +1,4 @@
-package com.example.playlist_maker
+package com.example.playlist_maker.presentation
 
 import android.content.Intent
 import android.net.Uri
@@ -9,6 +9,8 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.Toolbar
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
+import com.example.playlist_maker.App
+import com.example.playlist_maker.R
 import com.google.android.material.switchmaterial.SwitchMaterial
 
 
